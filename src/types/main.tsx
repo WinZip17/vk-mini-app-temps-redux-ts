@@ -1,5 +1,4 @@
-import ScreenSpinner from "@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner";
-import React, {MouseEventHandler} from "react";
+import {MouseEventHandler} from "react";
 import {
     useSelector as useReduxSelector,
     TypedUseSelectorHook,

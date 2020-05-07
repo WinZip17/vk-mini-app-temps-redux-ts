@@ -30,7 +30,7 @@ const App = (): JSX.Element => {
 			}
 		})
 		dispatch(Actions.setUserData())
-	}, [])
+	}, [dispatch])
 
 	const go = (e: any): void => {
 		dispatch(Actions.setActivePanel(e.currentTarget.dataset.to))
