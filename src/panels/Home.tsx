@@ -6,10 +6,13 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
-import {propsHome} from "../types/main";
+import { defaultProps, useSelector} from "../types/main";
 
-const Home = ({ id, go, fetchedUser } : propsHome): JSX.Element => (
-	<Panel id={id}>
+const Home = ({ id, go } : defaultProps): JSX.Element => {
+
+	const fetchedUser = useSelector(main => main.main.fetchedUser);
+
+	return<Panel id={id}>
 		<PanelHeader>Example</PanelHeader>
 		{fetchedUser &&
 		<Group title="User Data Fetched with VK Bridge">
@@ -29,6 +32,7 @@ const Home = ({ id, go, fetchedUser } : propsHome): JSX.Element => (
 			</Div>
 		</Group>
 	</Panel>
-);
+}
+
 
 export default Home;

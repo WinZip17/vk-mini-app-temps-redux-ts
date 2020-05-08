@@ -6,7 +6,7 @@ import * as Actions from './store/actions';
 import '@vkontakte/vkui/dist/vkui.css';
 import Home from './panels/Home';
 import Persik from './panels/Persik';
-import {useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { useSelector } from './types/main'
 
 
@@ -14,7 +14,6 @@ const App = (): JSX.Element => {
 
 	const dispatch = useDispatch();
 
-	const fetchedUser = useSelector(main => main.main.fetchedUser);
 	const activePanel = useSelector(main => main.main.activePanel);
 	const activeView = useSelector(main =>  main.main.activeView );
 	const popout = useSelector(main => main.main.popout );
@@ -39,7 +38,7 @@ const App = (): JSX.Element => {
 	return (
 		<Root activeView={activeView}>
 			<View id='homeView' activePanel={activePanel} popout={popout}>
-				<Home id='home' fetchedUser={fetchedUser} go={go} />
+				<Home id='home' go={go} />
 				<Persik id='persik' go={go} />
 			</View>
 		</Root>

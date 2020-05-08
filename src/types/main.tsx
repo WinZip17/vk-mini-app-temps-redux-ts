@@ -65,7 +65,7 @@ export interface setPopout {
     payload: JSX.Element | null
 }
 
-export type propsHome = {id: string, go: MouseEventHandler, fetchedUser: UserInfo | null}
+export type defaultProps = {id: string, go: MouseEventHandler}
 
 
 export type MainActionTypes =
